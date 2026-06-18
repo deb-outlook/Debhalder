@@ -8,24 +8,41 @@
         <lastmod>2026-06-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        
-        <!-- Important images for better indexing -->
+
+        <!-- Key Images for Better Google Indexing -->
         <image:image>
-            <image:loc>https://deb-outlook.github.io/Debhalder/images/victoria-memorial.jpg</image:loc>
+            <image:loc>https://deb-outlook.github.io/logo8/Screenshot%202026-06-18%20140514.png</image:loc>
+            <image:title>LifeLens Logo</image:title>
+            <image:caption>LifeLens - Capturing the World Through My Lens</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/main8/Screenshot%202026-06-18%20130921.png</image:loc>
+            <image:title>Deb Halder Portrait</image:title>
+            <image:caption>Portrait of Deb Halder - Travel Vlogger</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/Victoria/Screenshot%202026-06-18%20123915.png</image:loc>
             <image:title>Victoria Memorial, Kolkata</image:title>
-            <image:caption>4K Vlog - Stunning heritage architecture of Victoria Memorial</image:caption>
+            <image:caption>Beautiful Victoria Memorial - 4K Vlog</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://deb-outlook.github.io/Debhalder/images/prinsep-ghat.jpg</image:loc>
-            <image:title>Prinsep Ghat Sunset</image:title>
-            <image:caption>Beautiful sunset at Prinsep Ghat, Kolkata</image:caption>
+            <image:loc>https://deb-outlook.github.io/prinsep/Screenshot%202026-06-18%20124111.png</image:loc>
+            <image:title>Prinsep Ghat Monument</image:title>
+            <image:caption>Prinsep Ghat Sunset - Kolkata Travel Vlog</image:caption>
         </image:image>
-        
+
         <image:image>
-            <image:loc>https://deb-outlook.github.io/Debhalder/images/st-pauls-cathedral.jpg</image:loc>
+            <image:loc>https://deb-outlook.github.io/church/Screenshot%202026-06-18%20124412.png</image:loc>
             <image:title>St. Paul's Cathedral, Kolkata</image:title>
-            <image:caption>4K Vlog - Historic St. Paul's Cathedral</image:caption>
+            <image:caption>St. Paul's Cathedral - Historical Landmark</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/sunset/Screenshot%202026-06-18%20131335.png</image:loc>
+            <image:title>Kolkata Sunset</image:title>
         </image:image>
     </url>
 
