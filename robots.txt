@@ -1,0 +1,21 @@
+# robots.txt for LifeLens - Personal Vlog Website
+# https://deb-outlook.github.io/Debhalder/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://deb-outlook.github.io/Debhalder/sitemap.xml
+
+# Disallow sensitive or unnecessary paths
+Disallow: /assets/
+Disallow: /images/private/
+Disallow: /*.git
+Disallow: /*.github
+
+# Allow Google to crawl images properly
+User-agent: Googlebot-Image
+Allow: /
+
+# Crawl delay (optional - polite to servers)
+Crawl-delay: 1
