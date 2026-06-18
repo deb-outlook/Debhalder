@@ -2,22 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- Main Page -->
+    <!-- Main Homepage -->
     <url>
-        <loc>https://deb-outlook.github.io/Debhalder/DebHalder.html</loc>
+        <loc>https://deb-outlook.github.io/Debhalder/</loc>
         <lastmod>2026-06-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         
-        <!-- Example image entries (Google loves these for vlog sites) -->
+        <!-- Important images for better indexing -->
         <image:image>
             <image:loc>https://deb-outlook.github.io/Debhalder/images/victoria-memorial.jpg</image:loc>
             <image:title>Victoria Memorial, Kolkata</image:title>
-            <image:caption>4K Vlog - Stunning heritage architecture</image:caption>
+            <image:caption>4K Vlog - Stunning heritage architecture of Victoria Memorial</image:caption>
         </image:image>
+        
         <image:image>
             <image:loc>https://deb-outlook.github.io/Debhalder/images/prinsep-ghat.jpg</image:loc>
             <image:title>Prinsep Ghat Sunset</image:title>
+            <image:caption>Beautiful sunset at Prinsep Ghat, Kolkata</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/Debhalder/images/st-pauls-cathedral.jpg</image:loc>
+            <image:title>St. Paul's Cathedral, Kolkata</image:title>
+            <image:caption>4K Vlog - Historic St. Paul's Cathedral</image:caption>
         </image:image>
     </url>
 
