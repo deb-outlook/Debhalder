@@ -34,6 +34,27 @@
             <image:loc>https://deb-outlook.github.io/church/Screenshot%202026-06-18%20124412.png</image:loc>
             <image:title>St. Paul's Cathedral Kolkata</image:title>
         </image:image>
+        
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/sunset/Screenshot%202026-06-18%20131335.png</image:loc>
+            <image:title></image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://deb-outlook.github.io/style/Screenshot%202026-06-18%20131603.png</image:loc>
+            <image:title></image:title>
+        </image:image> 
+            
+        <image:image>
+            <image:loc></image:loc>
+            <image:title>https://deb-outlook.github.io/momdad8/Screenshot%202026-06-18%20134256.png</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc></image:loc>
+            <image:title>https://deb-outlook.github.io/butterfly/Screenshot%202026-06-18%20131552.png</image:title>
+        </image:image>
+        
     </url>
 
 </urlset>
