@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore with Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #10b981;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/1920/1080') center/cover;
+        }
+
+        .card-3d {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .card-3d:hover {
+            transform: perspective(1000px) rotateX(10deg) rotateY(10deg) scale(1.05);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #10b981;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #10b981, #34d399);
+            bottom: -8px;
+            left: 20%;
+        }
+
+        .gallery-img {
+            transition: all 0.5s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.08) rotate(2deg);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-lg z-50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                
+                <img src="https://deb-outlook.github.io/logo8/Screenshot%202026-06-18%20140514.png" 
+                     alt="My Vlogs Logo" 
+                     class="w-10 h-10 rounded-2xl object-cover shadow-lg shadow-emerald-500/50">
+                     
+                <div>
+                    <span class="text-2xl heading-font tracking-tight">My Vlogs</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium">
+                <a href="#me" class="nav-link">ME</a>
+                <a href="#nature" class="nav-link">NATURE</a>
+                <a href="#visits" class="nav-link">VISITS</a>
+                <a href="#gallery" class="nav-link">GALLERY</a>
+            </div>
+            
+            <a href="#contact" 
+               class="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-2xl text-sm font-semibold transition-all flex items-center gap-2">
+                <i class="fas fa-paper-plane"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center pt-20">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl mb-8 border border-white/20">
+                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="text-sm tracking-widest uppercase">Adventure Awaits</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-8xl heading-font font-bold leading-none mb-6 tracking-tighter">
+                CAPTURING<br>THE WORLD<br><span class="text-emerald-400">THROUGH MY LENS</span>
+            </h1>
+            
+            <p class="max-w-md mx-auto text-xl text-zinc-300 mb-12">
+                Join me on my journey through breathtaking landscapes, hidden gems, and life's beautiful moments.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#me" 
+                   class="group px-10 py-6 bg-white text-zinc-900 rounded-3xl font-semibold text-lg flex items-center justify-center gap-3 hover:scale-105 transition-all">
+                    <span>Meet Me</span>
+                    <i class="fas fa-arrow-right group-active:translate-x-1 transition"></i>
+                </a>
+                <a href="#visits" 
+                   class="px-10 py-6 border-2 border-white/70 hover:border-white rounded-3xl font-semibold text-lg flex items-center justify-center gap-3 transition-all">
+                    Explore Journeys
+                </a>
+            </div>
+        
+        <!-- 3D floating elements -->
+        <div class="absolute top-1/3 right-10 hidden lg:block">
+            <div class="w-40 h-40 bg-white/10 backdrop-blur-3xl rounded-3xl rotate-12 shadow-2xl border border-white/10 flex items-center justify-center text-8xl hover:rotate-6 transition">
+                📸
+            </div>
+        </div>
+    </section>
+
+    <!-- Me Section -->
+    <section id="me" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-5/12">
+                    <div class="section-header">
+                        <span class="uppercase tracking-[4px] text-emerald-400 text-sm font-medium">CHAPTER 01</span>
+                    </div>
+                    <h2 class="text-6xl heading-font font-bold mt-3 mb-8 leading-none">Hi, I'm Deb Halder</h2>
+                    
+                    <div class="prose prose-invert max-w-none text-lg text-zinc-300">
+                        <p>Passionate explorer With a camera in hand and curiosity in my heart, I travel wonders and sharing them through vlogs that inspire wanderlust.</p>
+                        <p>From mountain peaks to bustling city streets, every frame tells a story of adventure, resilience, and the beauty of our planet.</p>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-5xl font-semibold text-emerald-400">20+</div>
+                            <div class="text-sm text-zinc-400">Places Visited</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-semibold text-emerald-400">1.2K</div>
+                            <div class="text-sm text-zinc-400">Subscribers</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-semibold text-emerald-400">30+</div>
+                            <div class="text-sm text-zinc-400">Vlogs</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for your photo -->
+                <div class="lg:w-7/12">
+                    <div class="card-3d bg-zinc-800 p-3 rounded-3xl shadow-2xl border border-zinc-700 overflow-hidden">
+                        <img id="me-photo" src="https://deb-outlook.github.io/main8/Screenshot%202026-06-18%20130921.png" 
+                             alt="Portrait of me" 
+                             class="w-full h-auto rounded-2xl object-cover">
+                    </div>
+                    <div class="text-center mt-6 text-zinc-400 text-sm">— The face behind the camera —</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nature Section -->
+    <section id="nature" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-[4px] text-emerald-400 text-sm font-medium">CHAPTER 02</span>
+                <h2 class="text-6xl heading-font font-bold mt-3">Nature</h2>
+                <p class="mt-4 text-xl text-zinc-400 max-w-md mx-auto">Moments where the earth whispers its secrets</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Nature placeholders - replace src with your images -->
+                <div class="card-3d group bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/park8/Screenshot%202026-06-18%20122420.png" 
+                             alt="Nature 1" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Peaceful Park Sunset</h3>
+                                <p class="text-emerald-400 text-sm mt-1">Ichapur</p>
+                            </div>
+                            <i class="fas fa-leaf text-4xl text-emerald-600/30 group-hover:text-emerald-500 transition"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-3d group bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/harbour8/Screenshot%202026-06-18%20122703.png" 
+                             alt="Nature 2" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Dim misty harbor</h3>
+                                <p class="text-emerald-400 text-sm mt-1">Dhobi Ghat</p>
+                            </div>
+                            <i class="fas fa-water text-4xl text-emerald-600/30 group-hover:text-emerald-500 transition"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-3d group bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/canal8/Screenshot%202026-06-18%20122945.png" 
+                             alt="Nature 3" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Lush verdant canal</h3>
+                                <p class="text-emerald-400 text-sm mt-1">Barrackpore cantt</p>
+                            </div>
+                            <i class="fas fa-sun text-4xl text-emerald-600/30 group-hover:text-emerald-500 transition"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visits Section -->
+    <section id="visits" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-[4px] text-emerald-400 text-sm font-medium">CHAPTER 03</span>
+                <h2 class="text-6xl heading-font font-bold mt-3">Places I've Visited</h2>
+                <p class="mt-4 text-xl text-zinc-400">Wanderlust captured in frames</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Visit placeholders -->
+                <div class="card-3d bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/Victoria/Screenshot%202026-06-18%20123915.png" 
+                             alt="Visit 1" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">Victoria Memorial</h3>
+                        <p class="text-zinc-400">Maidan</p>
+                        <div class="mt-6 pt-6 border-t border-zinc-700 text-xs flex justify-between text-emerald-400">
+                            <span>4K Vlog Available</span>
+                            <span>12 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-3d bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/prinsep/Screenshot%202026-06-18%20124111.png" 
+                             alt="Visit 2" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">Prinsep Monument</h3>
+                        <p class="text-zinc-400">Prinsep Ghat</p>
+                        <div class="mt-6 pt-6 border-t border-zinc-700 text-xs flex justify-between text-emerald-400">
+                            <span>4K Vlog Available</span>
+                            <span>18 min</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-3d bg-zinc-800 rounded-3xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://deb-outlook.github.io/church/Screenshot%202026-06-18%20124412.png" 
+                             alt="Visit 3" class="gallery-img w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-semibold mb-2">St. Paul's Cathedral</h3>
+                        <p class="text-zinc-400">Kolkata</p>
+                        <div class="mt-6 pt-6 border-t border-zinc-700 text-xs flex justify-between text-emerald-400">
+                            <span>4K Vlog Available</span>
+                            <span>22 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Gallery -->
+    <section id="gallery" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-5xl heading-font font-bold mb-4">The Full Collection</h2>
+            <p class="text-center text-zinc-400 mb-16">Click on any image to enlarge</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="full-gallery">
+                <!-- More placeholders. User can add their own here -->
+                <img src="https://deb-outlook.github.io/sunset/Screenshot%202026-06-18%20131335.png" class="gallery-img aspect-square object-cover rounded-3xl cursor-pointer">
+                <img src="https://deb-outlook.github.io/style/Screenshot%202026-06-18%20131603.png" class="gallery-img aspect-square object-cover rounded-3xl cursor-pointer">
+                <img src="https://deb-outlook.github.io/momdad8/Screenshot%202026-06-18%20134256.png" class="gallery-img aspect-square object-cover rounded-3xl cursor-pointer">
+                <img src="https://deb-outlook.github.io/butterfly/Screenshot%202026-06-18%20131552.png" class="gallery-img aspect-square object-cover rounded-3xl cursor-pointer">
+                <!-- Add more as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-black py-20 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-3xl">🌲</div>
+                    <span class="text-4xl heading-font">My Vlogs</span>
+                </div>
+                <p class="text-zinc-400 max-w-sm">Documenting the world's beauty one frame at a time. Thank you for being part of this journey.</p>
+                
+                <div class="mt-12 flex gap-6">
+    <a href="https://github.com/deb-outlook" 
+       target="_blank" 
+       class="text-3xl hover:text-emerald-400 transition">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://instagram.com/veiled_core" 
+       target="_blank" 
+       class="text-3xl hover:text-emerald-400 transition">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com/HalderDeb35924" 
+       target="_blank" 
+       class="text-3xl hover:text-emerald-400 transition">
+        <i class="fab fa-twitter"></i>
+    </a>
+</div>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-y-10">
+                <div>
+                    <div class="uppercase text-xs tracking-widest mb-4 text-zinc-500">Quick Links</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#me" class="block hover:text-emerald-400">About Me</a>
+                        <a href="#nature" class="block hover:text-emerald-400">Nature Stories</a>
+                        <a href="#visits" class="block hover:text-emerald-400">Travel Vlogs</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="uppercase text-xs tracking-widest mb-4 text-zinc-500">Get in Touch</div>
+                    <div class="space-y-4">
+                        <a href="mailto:your@email.com" class="flex items-center gap-3 hover:text-emerald-400">
+                            <i class="fas fa-envelope"></i>
+                            <span>debhalder201020@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center text-zinc-500 text-xs mt-20">
+            © 2026 My Vlogs. Crafted with passion for the wild.
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 hidden flex items-center justify-center z-[100]">
+        <div class="relative max-w-4xl w-full px-6">
+            <button onclick="closeModal()" class="absolute -top-12 right-6 text-white text-4xl hover:text-emerald-400">&times;</button>
+            <img id="modalImage" src="" class="w-full rounded-3xl shadow-2xl" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script already included via CDN
+        
+        function enlargeImage(img) {
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('imageModal').classList.add('flex');
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                closeModal();
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        console.log('%cMy Vlogs website loaded successfully ✨', 'color:#10b981; font-family:monospace');
+    </script>
+</body>
+</html>
